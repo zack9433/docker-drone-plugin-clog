@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-clog -F -C ${PLUGIN_CHANGELOG_FILE}
+BUMP=$(conventional-recommended-bump -p angular)
+
+clog -F --"$BUMP" -C ${PLUGIN_CHANGELOG_FILE}
 
